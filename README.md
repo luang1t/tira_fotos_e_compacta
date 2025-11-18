@@ -18,5 +18,17 @@ s
    git clone https://github.com/luang1t/rotina-fotos-compactadas.git
    cd rotina-fotos-compactadas
 
-2. **Abra o arquivo** index.html em seu navegador preferido. Não é necessário rodar servidores ou instalar dependências; tudo funciona diretamente no navegador.
--   **Para testar localmente**, basta dar duplo clique no index html ou usar uma extensão de Live Server no VS Code
+2. **Abra o arquivo** ***index.html*** em seu navegador preferido. Não é necessário rodar servidores ou instalar dependências; tudo funciona diretamente no navegador.
+  - **Para testar localmente**, basta dar duplo clique no index html ou usar uma extensão de Live Server no VS Code
+
+```
+
+<div class="container">
+  <video id="video" autoplay playsinline></video>
+  <canvas id="photo" style="display:none;"></canvas>
+  <button id="cameraAction">Ligar Câmera</button>
+  <div id="gallery"></div>
+  <button id="downloadZip">⬇ Baixar fotos</button>
+</div>
+
+```  
