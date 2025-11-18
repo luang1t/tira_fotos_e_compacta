@@ -1,4 +1,4 @@
-# 📸 Rotina de Câmera – Captura de Fotos e Download em ZIP
+# Rotina de Câmera – Captura de Fotos e Download em ZIP
 
 A **Rotina de Câmera** é um pequeno módulo em JavaScript que simplifica o acesso à câmera do navegador. Com ele, você pode
 
@@ -10,7 +10,7 @@ A **Rotina de Câmera** é um pequeno módulo em JavaScript que simplifica o ace
 Esta rotina é ideal para *páginas de teste, pequenos formulários de cadastro, protótipos ou quaisquer aplicações web* que precisam de uma funcionalidade básica de captura de imagens via webcam. Tudo é feito em JavaScript puro — sem frameworks externos.
 
 s
-## 🚀 Instalação
+## Instalação
 
 1. **Clone ou baixe** este repositório:
 
