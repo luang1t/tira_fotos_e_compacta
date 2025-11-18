@@ -70,10 +70,10 @@ O módulo ***cameraRoutine.mjs*** pode ser importado como um ES Module em qualqu
 ```
 # Usando API retornada:
 **O objeto retornado por initCameraRoutine fornece funções que permitem controlar a câmera e acessar as fotos:**
-- **camera.getImagens()** - retorna uma cópia do array de imagens capturadas. Cada item possui um ***id*** (timestamp) e um ***src*** em Base64.
-- **camera.isCameraAtiva()** - informa se a câmera está ligada.
-- **camera.desligarCamera()** -  desliga a câmera está ligada.
-- **camera.limparGaleria()** -  limpa o array de imagens e remove as miniaturas da galeria.
+- **camera.getImagens();** - retorna uma cópia do array de imagens capturadas. Cada item possui um ***id*** (timestamp) e um ***src*** em Base64.
+- **camera.isCameraAtiva();** - informa se a câmera está ligada.
+- **camera.desligarCamera();** -  desliga a câmera está ligada.
+- **camera.limparGaleria();** -  limpa o array de imagens e remove as miniaturas da galeria.
 
 ```
 
