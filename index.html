@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câmera + ZIP</title>
+
+    <!-- Seu CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Container principal que agrupa câmera, botões e galeria -->
+    <div class="container">
+
+        <!-- Vídeo que mostra a imagem da câmera ao vivo -->
+        <!-- id="video" é usado pela rotina (config.videoId) -->
+        <video id="video" autoplay playsinline></video>
+
+        <!-- Canvas usado internamente para “tirar” a foto a partir do vídeo -->
+        <!-- id="photo" é usado pela rotina (config.canvasId). Pode ficar oculto. -->
+        <canvas id="photo" style="display: none;"></canvas>
+
+        <!-- Botão principal: liga a câmera e tira foto -->
+        <!-- id="cameraAction" é usado pela rotina (config.cameraButtonId) -->
+        <!-- Coloquei um texto padrão aqui pra não ficar só um tracinho, mesmo se o JS falhar -->
+        <button id="cameraAction">📷 Ligar Câmera</button>
+
+        <!-- Título da galeria de fotos tiradas -->
+        <h2>Galeria</h2>
+
+        <!-- Div onde serão inseridas dinamicamente as miniaturas das fotos -->
+        <!-- id="gallery" é usado pela rotina (config.galleryId) -->
+        <div id="gallery"></div>
+
+        <!-- Botão para baixar as fotos selecionadas em um arquivo ZIP -->
+        <!-- id="downloadZip" é usado pela rotina (config.downloadButtonId) -->
+        <button id="downloadZip">⬇ Baixar fotos selecionadas (.ZIP)</button>
+
+    </div>
+
+    <!-- Importa a biblioteca JSZip via CDN, necessária para gerar o arquivo ZIP -->
+    <!-- Ela expõe o objeto global "JSZip", usado dentro da rotina -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <!-- Importa o módulo ES com a rotina da câmera -->
+    <script type="module">
+        // Importa a função initCameraRoutine do módulo ES
+        import { initCameraRoutine } from './cameraRoutine.mjs';
+
+        // Inicializa a rotina, passando os IDs dos elementos da tela
+        const camera = initCameraRoutine({
+            cameraButtonId:   'cameraAction', // ID do botão principal
+            downloadButtonId: 'downloadZip',  // ID do botão de download ZIP
+            videoId:          'video',        // ID do elemento <video>
+            canvasId:         'photo',        // ID do elemento <canvas>
+            galleryId:        'gallery',      // ID da div da galeria
+            textos: {                         // Textos opcionais do botão principal
+                ligar: '📷 Ligar Câmera',     // Texto quando a câmera está desligada
+                fotografar: '📸 Tirar Foto'   // Texto quando a câmera está ligada
+            }
+        });
+
+        // Exemplo de uso da API pública (opcional):
+        // console.log(camera.getImagens());
+        // console.log(camera.isCameraAtiva());
+        // camera.desligarCamera();
+        // camera.limparGaleria();
+    
+    </script>
+
+</body>
+</html>
