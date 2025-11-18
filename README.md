@@ -19,5 +19,4 @@ s
    cd rotina-fotos-compactadas
 
 2. **Abra o arquivo** index.html em seu navegador preferido. Não é necessário rodar servidores ou instalar dependências; tudo funciona diretamente no navegador.
-
-  Para testar localmente, basta dar duplo clique no index html ou usar uma extensão de Live Server no VS Code
+- **Para testar localmente**, basta dar duplo clique no index html ou usar uma extensão de Live Server no VS Code
